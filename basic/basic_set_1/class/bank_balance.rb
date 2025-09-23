@@ -1,3 +1,6 @@
+  # •	Instance methods (called on objects → e1.details)
+	# •	Class methods (called on class → Employee.total_employees)
+
 class BankAccount
   @@total_balance = 0
 
@@ -7,11 +10,13 @@ class BankAccount
     @@total_balance += balance
   end
 
+  # Instance method
   def deposit(amount)
     @balance += amount
     @@total_balance += amount
   end
 
+  # class method
   def self.total_balance
     @@total_balance
   end
