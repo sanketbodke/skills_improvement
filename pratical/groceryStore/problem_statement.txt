@@ -1,0 +1,47 @@
+Ruby Grocery Price Calculator
+
+At the local grocery store, items are sold by quantity. 
+For example, Milk costs $3.97. However, sometimes there is a sale, and customers 
+can buy multiple items for a discounted price.
+
+This week's pricing table:
+Item	Unit Price	Sale Price
+Milk	$3.97	2 for $5.00
+Bread	$2.17	3 for $6.00
+Banana	$0.99	—
+Apple	$0.89	—
+
+Sale Rules
+Sale prices are applied only when the required quantity is met.
+If more than the sale quantity is purchased, the extra items are charged at the unit price.
+Example:
+If you buy 3 Milk:
+
+First 2 Milk → $5.00 (sale)
+Third Milk → $3.97 (unit price)
+Total: $5.00 + $3.97 = $8.97
+
+Task
+You are to build a Ruby program that:
+
+Asks the user to list all the purchased items, separated by commas.
+Calculates the total cost.
+Applies sales where applicable.
+Prints a receipt with:
+Each item's quantity and price
+The total price
+The amount saved due to sales
+
+Example Execution
+$ ruby price_calculator.rb
+Please enter all the items purchased separated by a comma
+milk,milk,bread,banana,bread,bread,bread,milk,apple
+
+Output:
+Item	Quantity	Price
+Milk	3	$8.97
+Bread	4	$8.17
+Banana	1	$0.89
+Apple	1	$0.99
+Total price : $19.02
+You saved $3.45 today.
