@@ -19,13 +19,13 @@
 
 def skip_animals(animals, skip)
 
+  result = []
   animals.each_with_index do |animal, index|
-    if index < skip
-      animals.shift
-    end  
+    if index >= skip
+      result << "#{index}:#{animal}"
+    end
   end
-
-  animals
+  result
 end
 
 puts skip_animals(['leopard', 'bear', 'fox', 'wolf'], 2)
