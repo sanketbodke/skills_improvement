@@ -30,7 +30,7 @@ def displayList(head)
     current = current.next
   end
   
-  values.join(" -> ")
+  values
 end  
 
 arr = [1, 1, 2, 3, 3]
