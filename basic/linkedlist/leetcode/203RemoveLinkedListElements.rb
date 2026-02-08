@@ -49,7 +49,7 @@ def display(head)
   result
 end  
 
-def remove_all(head, val)
+def remove_elements(head, val)
   while head && head.val == val
     head = head.next
   end
@@ -69,5 +69,5 @@ end
 
 list = [1,8,4,3,8]
 head = create_a_list(list)
-new_head = remove_all(head, 8)
+new_head = remove_elements(head, 8)
 puts display(new_head).inspect
