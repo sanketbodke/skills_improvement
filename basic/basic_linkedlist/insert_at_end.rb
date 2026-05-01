@@ -8,8 +8,6 @@ class ListNode
 end
 
 def create_a_list(arr)
-  return nil if arr.empty?
-
   head = ListNode.new(arr[0])
   current = head
 
@@ -21,35 +19,18 @@ def create_a_list(arr)
   head
 end
 
-def insert_at_last(head)
-  last_val = 6
+def print_list(head)
   current = head
-
-  last_node = ListNode.new(last_val)
-
-  while current.next_node
-    current = current.next_node
-  end
-
-  current.next_node = last_node
-
-  head
-end
-
-def display(head)
-  current = head
-  val = []
+  list = []
 
   while current
-    val << current.val
+    list << current.val
     current = current.next_node
   end
 
-  val
+  list
 end
 
-arr = [1, 1, 2, 3, 5]
-head = create_a_list(arr)
-last_insert = insert_at_last(head)
-
-puts display(last_insert)
+list = [3,1,2]
+head = create_a_list(list)
+puts print_list(head)
